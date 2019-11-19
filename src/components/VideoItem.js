@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Paper, Grid, Typography } from "@material-ui/core";
 
 const VideoItem = ({ video }) => {
-  let thumbnailSrc = video.snippet.thumbnails.default.url;
+  let thumbnailSrc = video.snippet.thumbnails.medium.url;
   //   const videoSrc = `https://www.youtube.com/embed/${videoId}`;
   return (
     <Grid item xs={12}>
