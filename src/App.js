@@ -32,10 +32,10 @@ export default class App extends Component {
             <Grid item xs={12}>
               <SearchBar handleSubmit={this.handleSubmit} />
             </Grid>
-            <Grid item xs={10}>
+            <Grid item xs={8}>
               <VideoDetail video={this.state.selectedVideo} />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={1}>
               <VideoList searchResults={this.state.searchResults} />
             </Grid>
           </Grid>

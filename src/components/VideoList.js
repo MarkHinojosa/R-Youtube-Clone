@@ -6,11 +6,11 @@ const VideoList = ({ searchResults }) => {
   if (!searchResults) {
     return null;
   } else {
-    const videos = searchResults.map((video, id) => {
+    const listOfVideos = searchResults.map((video, id) => {
       return <VideoItem key={id} video={video} />;
     });
 
-    return videos;
+    return <Grid>{listOfVideos}</Grid>;
   }
 };
 
