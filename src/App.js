@@ -8,6 +8,10 @@ export default class App extends Component {
     searchResults: null,
     selectedVideo: null
   };
+
+  componentDidMount = () => {
+    this.handleSubmit("react.js");
+  };
   handleSubmit = async searchTerm => {
     let response = await youtube.get("search", {
       params: {
