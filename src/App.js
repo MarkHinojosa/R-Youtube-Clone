@@ -24,19 +24,29 @@ export default class App extends Component {
     });
   };
 
+  onVideoSelect = video =>
+    this.setState({ selectedVideo: video }, () =>
+      console.log("set the state", video)
+    );
+
   render() {
     return (
-      <Grid justify="center" container spacing={10}>
+      <Grid style={{ justifyContent: "center" }} container spacing={12}>
         <Grid item xs={12}>
-          <Grid container spacing={10}>
+          <Grid container spacing={12}>
             <Grid item xs={12}>
               <SearchBar handleSubmit={this.handleSubmit} />
             </Grid>
-            <Grid item xs={8}>
-              <VideoDetail video={this.state.selectedVideo} />
-            </Grid>
-            <Grid item xs={1}>
-              <VideoList searchResults={this.state.searchResults} />
+            <Grid container xs={12}>
+              <Grid item xs={8}>
+                <VideoDetail video={this.state.selectedVideo} />
+              </Grid>
+              <Grid item xs={4}>
+                <VideoList
+                  searchResults={this.state.searchResults}
+                  onSelectVideo={this.onVideoSelect}
+                />
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
