@@ -1,6 +1,6 @@
 import React from "react";
 import VideoItem from "./VideoItem";
-import { Paper, Grid, Typography } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 const VideoList = ({ searchResults, onSelectVideo }) => {
   if (!searchResults) {
