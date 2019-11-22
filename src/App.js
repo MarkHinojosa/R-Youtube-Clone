@@ -10,7 +10,7 @@ export default class App extends Component {
   };
 
   componentDidMount = () => {
-    this.handleSubmit("eunice new mexico rollercoaster road");
+    this.handleSubmit("react.js");
   };
   handleSubmit = async searchTerm => {
     let response = await youtube.get("search", {
