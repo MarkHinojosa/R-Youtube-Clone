@@ -15,7 +15,7 @@ export default class SearchBar extends Component {
 
   render() {
     return (
-      <Paper elevation={6} style={{ padding: "25px" }}>
+      <Paper elevation={6} style={{ margin: "25px" }}>
         <form onSubmit={this.onFormSubmit}>
           <TextField fullWidth label="Search..." onChange={this.handleChange} />
         </form>
