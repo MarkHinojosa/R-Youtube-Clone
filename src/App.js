@@ -28,10 +28,7 @@ export default class App extends Component {
     });
   };
 
-  onVideoSelect = video =>
-    this.setState({ selectedVideo: video }, () =>
-      console.log("set the state", video)
-    );
+  onVideoSelect = video => this.setState({ selectedVideo: video });
 
   render() {
     return (

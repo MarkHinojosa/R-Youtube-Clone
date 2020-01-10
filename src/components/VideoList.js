@@ -6,7 +6,6 @@ const VideoList = ({ searchResults, onSelectVideo }) => {
   if (!searchResults) {
     return null;
   } else {
-    console.log(onSelectVideo);
     const listOfVideos = searchResults.map((video, id) => {
       return <VideoItem onSelectVideo={onSelectVideo} key={id} video={video} />;
     });
